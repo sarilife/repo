@@ -1,0 +1,18 @@
+<form [formGroup]="adsForm" (ngSubmit)="onSubmit()">
+
+    <label>
+        Name:
+        <input type="text" formControlName="name">
+    </label>
+
+    <label>
+        description:
+        <input type="text" formControlName="description">
+    </label>
+    <label>
+        link:
+        <input type="text" formControlName="link">
+    </label>
+    <button type="submit" [disabled]="!adsForm.valid">Submit</button>
+
+</form>
