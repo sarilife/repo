@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import { BidItem } from '../models/biditem.model';
+import { Seller } from '../models/seller.models';
 
 @Injectable()
 export class BidItemService {
@@ -17,5 +18,7 @@ export class BidItemService {
         return this.httpClient.get("http://localhost:8000/api/BidItem/")
             .map((bidItem: BidItem[]) => bidItem);
     }
+
+
 
 }

@@ -1,0 +1,33 @@
+<form [formGroup]="itemBidForm" (ngSubmit)="onSubmit()">
+
+    <label>
+        Item Name :
+        <input type="text" formControlName="name">
+    </label>
+
+
+
+    <label>
+        Price
+        <input type="number" formControlName="start_price">
+    </label>
+    <label>
+        fix price
+    </label>
+    <select type="" formControlName="fixed_price">
+        <option value="1">Fixed</option>
+        <option value="0">Not Fixed</option>
+    </select>
+
+
+    <label>
+        image Url :
+
+        <input type="file" id="avatar" (change)="onFileChange($event)" #fileInput />
+    </label>
+
+    <button type="submit" [disabled]="!itemBidForm.valid">Submit</button>
+
+</form>
+
+<img [src]="url" height="200"> <br />
