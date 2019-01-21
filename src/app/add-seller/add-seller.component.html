@@ -1,0 +1,18 @@
+<form [formGroup]="sellerForm" (ngSubmit)="onSubmit()">
+
+    <label>
+        Name:
+        <input type="text" formControlName="name">
+    </label>
+
+    <label>
+        email :
+        <input type="text" formControlName="email">
+    </label>
+    <label>
+        phone:
+        <input type="text" formControlName="phone_number">
+    </label>
+    <button type="submit" [disabled]="!sellerForm.valid">Submit</button>
+
+</form>
