@@ -7,7 +7,7 @@ import { Seller } from '../models/seller.models';
 export class SellerService {
 
     constructor(public httpClient: HttpClient) { }
-    public seller1: Seller;
+    public num: number;
 
     sellerAsyncPost(seller: Seller): Observable<Seller> {
         return this.httpClient.post("http://localhost:8000/api/Seller/", seller)
@@ -16,6 +16,12 @@ export class SellerService {
 
     sellerAsyncGet(): Observable<Seller[]> {
         return this.httpClient.get("http://localhost:8000/api/Seller/")
+            .map((seller: Seller[]) => seller);
+    }
+
+    sellerAsyncGetByEmail(email): Observable<Seller[]> {
+        return this.httpClient.get("http://localhost:8000/api/Seller?email=" +
+            email)
             .map((seller: Seller[]) => seller);
     }
 

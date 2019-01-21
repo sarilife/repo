@@ -26,19 +26,22 @@ export class AddBidItemComponent implements OnInit {
     constructor(public sellerService: SellerService, public route: ActivatedRoute, public router: Router, public bidItemService: BidItemService) { }
 
     ngOnInit() {
+        console.log(this.route.snapshot.paramMap);
     }
     onSubmit() {
 
-        console.warn(this.sellerService.seller1);
+        // console.warn(this.sellerService.seller1);
         this.bidItem = new BidItem(
+            null,
             this.itemBidForm.value.name,
             // this.itemBidForm.value.image,
             this.fileSelected,
             this.itemBidForm.value.start_price,
-            this.sellerService.seller1,
+            // this.sellerService.seller1,
+            Number(this.sellerService.num),
             null,
             this.itemBidForm.value.fixed_price)
-
+        console.log(this.bidItem);
 
         this.bidItemService.bidItemAsyncPost(this.bidItem).subscribe(
             (e) => {

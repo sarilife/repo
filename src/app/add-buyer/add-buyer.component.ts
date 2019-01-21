@@ -22,7 +22,7 @@ export class AddBuyerComponent implements OnInit {
     }
     onSubmit() {
         console.warn(this.buyerForm.value);
-        this.buyer = new Buyer(this.buyerForm.value.name,
+        this.buyer = new Buyer(null, this.buyerForm.value.name,
             this.buyerForm.value.email,
             this.buyerForm.value.phone_number)
         this.buyerService.buyerAsyncPost(this.buyer).subscribe();
