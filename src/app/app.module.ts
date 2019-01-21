@@ -16,6 +16,9 @@ import { SellerComponent } from './seller/seller.component';
 import { SellerService } from './shared/services/seller.service';
 import { AddSellerComponent } from './add-seller/add-seller.component';
 import { BuyerComponent } from './buyer/buyer.component';
+import { AddBuyerComponent } from './add-buyer/add-buyer.component';
+import { BuyerService } from './shared/services/buyer.service';
+import { ItemComponent } from './item/item.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -25,6 +28,8 @@ import { BuyerComponent } from './buyer/buyer.component';
         SellerComponent,
         AddSellerComponent,
         BuyerComponent,
+        AddBuyerComponent,
+        ItemComponent,
     ],
     imports: [
         BrowserModule,
@@ -37,7 +42,7 @@ import { BuyerComponent } from './buyer/buyer.component';
 
         ReactiveFormsModule
     ],
-    providers: [AdvertisementService, SellerService],
+    providers: [AdvertisementService, SellerService, BuyerService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
