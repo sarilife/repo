@@ -12,12 +12,19 @@ import { AdvertisementService } from './shared/services/advertisement.service';
 import { AddAdvertisementComponent } from './add-advertisement/add-advertisement.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl } from '@angular/forms';
+import { SellerComponent } from './seller/seller.component';
+import { SellerService } from './shared/services/seller.service';
+import { AddSellerComponent } from './add-seller/add-seller.component';
+import { BuyerComponent } from './buyer/buyer.component';
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
         AdvertisementComponent,
         AddAdvertisementComponent,
+        SellerComponent,
+        AddSellerComponent,
+        BuyerComponent,
     ],
     imports: [
         BrowserModule,
@@ -27,11 +34,10 @@ import { FormGroup, FormControl } from '@angular/forms';
         HttpClientModule,
         FormsModule,
 
-        // FormGroup,
-        // FormControl,
+
         ReactiveFormsModule
     ],
-    providers: [AdvertisementService],
+    providers: [AdvertisementService, SellerService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
