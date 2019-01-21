@@ -12,13 +12,13 @@ import { BidItemComponent } from './bid-item/bid-item.component';
 import { BidBuyerComponent } from './bid-buyer/bid-buyer.component';
 
 const routes: Routes = [
-    { path: "home", component: HomeComponent },
-    { path: "advertisements", component: AdvertisementComponent },
-    { path: "sellers", component: SellerComponent },
-    { path: "buyers", component: BuyerComponent },
-    { path: "add_ads", component: AddAdvertisementComponent },
-    { path: "add_seller", component: AddSellerComponent },
-    { path: "add_buyer", component: AddBuyerComponent },
+    { path: "home", component: HomeComponent }, // 1
+    { path: "advertisements", component: AdvertisementComponent }, // 1
+    { path: "sellers", component: SellerComponent }, // 1
+    { path: "buyers", component: BuyerComponent }, // 1
+    { path: "add_ads", component: AddAdvertisementComponent }, // 1
+    { path: "add_seller", component: AddSellerComponent }, // 1
+    { path: "add_buyer", component: AddBuyerComponent }, // 1
     { path: "add_bid_item", component: AddBidItemComponent },
     { path: "bid_item", component: BidItemComponent },
     { path: "buyer/bid/:id", component: AddBuyerComponent },
