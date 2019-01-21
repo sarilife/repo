@@ -9,6 +9,7 @@ import { BuyerComponent } from './buyer/buyer.component';
 import { AddBuyerComponent } from './add-buyer/add-buyer.component';
 import { AddBidItemComponent } from './add-bid-item/add-bid-item.component';
 import { BidItemComponent } from './bid-item/bid-item.component';
+import { BidBuyerComponent } from './bid-buyer/bid-buyer.component';
 
 const routes: Routes = [
     { path: "home", component: HomeComponent },
@@ -19,7 +20,9 @@ const routes: Routes = [
     { path: "add_seller", component: AddSellerComponent },
     { path: "add_buyer", component: AddBuyerComponent },
     { path: "add_bid_item", component: AddBidItemComponent },
-    { path: "bid_item", component: BidItemComponent }
+    { path: "bid_item", component: BidItemComponent },
+    { path: "buyer/bid/:id", component: BidBuyerComponent }
+
 
 
 

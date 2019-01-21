@@ -3,9 +3,9 @@ import { BidItem } from '../shared/models/biditem.model';
 import { BidItemService } from '../shared/services/biditem.service';
 
 @Component({
-  selector: 'app-bid-item',
-  templateUrl: './bid-item.component.html',
-  styleUrls: ['./bid-item.component.css']
+    selector: 'app-bid-item',
+    templateUrl: './bid-item.component.html',
+    styleUrls: ['./bid-item.component.css']
 })
 export class BidItemComponent implements OnInit {
 
@@ -21,8 +21,12 @@ export class BidItemComponent implements OnInit {
             this.bidItem = bidItem;
 
 
+
         }
         )
     }
+
+
+
 
 }

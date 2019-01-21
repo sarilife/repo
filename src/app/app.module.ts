@@ -22,6 +22,7 @@ import { ItemComponent } from './item/item.component';
 import { BidItemComponent } from './bid-item/bid-item.component';
 import { AddBidItemComponent } from './add-bid-item/add-bid-item.component';
 import { BidItemService } from './shared/services/biditem.service';
+import { BidBuyerComponent } from './bid-buyer/bid-buyer.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -35,6 +36,7 @@ import { BidItemService } from './shared/services/biditem.service';
         ItemComponent,
         BidItemComponent,
         AddBidItemComponent,
+        BidBuyerComponent,
     ],
     imports: [
         BrowserModule,

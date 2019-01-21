@@ -14,9 +14,61 @@
     </tbody>
 </table> -->
 
-<slideshow #slideshow [imageUrls]="imageUrls" [height]="height" [minHeight]="minHeight" [arrowSize]="arrowSize"
+<!-- <slideshow #slideshow [imageUrls]="imageUrls" [height]="height" [minHeight]="minHeight" [arrowSize]="arrowSize"
     [showArrows]="showArrows" [disableSwiping]="disableSwiping" [autoPlay]="autoPlay" [stopAutoPlayOnSlide]="stopAutoPlayOnSlide"
     [debug]="debug" [backgroundSize]="backgroundSize" [backgroundPosition]="backgroundPosition" [backgroundRepeat]="backgroundRepeat"
     [showDots]="showDots" [dotColor]="dotColor" [showCaptions]="showCaptions" [captionColor]="captionColor"
     [captionBackground]="captionBackground" [lazyLoad]="lazyLoad" [hideOnNoSlides]="hideOnNoSlides">
-</slideshow>
+</slideshow> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ADS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="row">
+<div class="barcode col-md-2">
+
+
+</div>
+
+<div id="demo" class="carousel slide col-md-10" data-ride="carousel">
+    <div class="row-md-10">
+
+    <slideshow #slideshow [imageUrls]="imageUrls" [height]="height" [minHeight]="minHeight" [arrowSize]="arrowSize"
+        [showArrows]="showArrows" [disableSwiping]="disableSwiping" [autoPlay]="autoPlay" [stopAutoPlayOnSlide]="stopAutoPlayOnSlide"
+        [debug]="debug" [backgroundSize]="backgroundSize" [backgroundPosition]="backgroundPosition" [backgroundRepeat]="backgroundRepeat"
+        [showDots]="showDots" [dotColor]="dotColor" [showCaptions]="showCaptions" [captionColor]="captionColor"
+        [captionBackground]="captionBackground" [lazyLoad]="lazyLoad" [hideOnNoSlides]="hideOnNoSlides">
+    </slideshow>
+    
+    </div>
+    <div class="row-md-2">
+            <table class="table">
+                    <thead>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Descriptions </th>
+                    </thead>
+                    <tbody *ngFor="let a of advertisements;let i = index;">
+                        <th>{{i+1}}</th>
+                        <th>{{a.name}}</th>
+                        <th>{{a.description}}</th>
+                        
+                    </tbody>
+                </table>
+    </div>
+</div>
+</div>
+</body>
+</html>
+​
