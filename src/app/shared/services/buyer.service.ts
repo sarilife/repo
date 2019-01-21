@@ -18,5 +18,10 @@ export class BuyerService {
             .map((buyer: Buyer[]) => buyer);
     }
 
+    buyerAsyncGetById(id): Observable<Buyer> {
+        return this.httpClient.get("http://localhost:8000/api/Buyer/" + id + "/")
+            .map((buyer: Buyer) => buyer);
+    }
+
 
 }

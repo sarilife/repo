@@ -20,9 +20,15 @@ export class BidItemService {
     }
 
 
-    bidItemAsyncGetItemById(id): Observable<BidItem[]> {
-        return this.httpClient.get("http://localhost:8000/api/BidItem?bid_item_id=" + id)
-            .map((bidItem: BidItem[]) => bidItem);
+    bidItemAsyncGetItemById(id): Observable<BidItem> {
+        return this.httpClient.get("http://localhost:8000/api/BidItem/" + id + "/")
+            .map((bidItem: BidItem) => bidItem);
+
+    }
+
+    bidItemAsyncPutItemById(id, bidItem: BidItem): Observable<BidItem> {
+        return this.httpClient.put("http://localhost:8000/api/BidItem/" + id + "/", bidItem)
+            .map((bidItem: BidItem) => bidItem);
 
     }
 

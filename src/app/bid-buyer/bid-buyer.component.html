@@ -1,2 +1,11 @@
-<h2>{{bidItems[0].name}}</h2>
-<img src="{{bidItems[0].image}}" width="500px" height="500px" />
+<h2>product name :{{bidItem.name}}</h2>
+<h2>start price :{{bidItem.start_price}}</h2>
+<h2>fix price : {{bidItem.fixed_price}}</h2>
+<img src="{{bidItem.image}}" width="500px" height="500px" />
+<form class="form-horizontal" [formGroup]="changePriceForm" (ngSubmit)="onSubmit()">
+    choose price
+    <input type="number" formControlName="price">
+    <br />
+    <button type="submit" [disabled]="!changePriceForm.valid">Submit</button>
+
+</form>
