@@ -1,18 +1,30 @@
-<form [formGroup]="adsForm" (ngSubmit)="onSubmit()">
 
-    <label>
-        Name:
-        <input type="text" formControlName="name">
-    </label>
+<form class="form-horizontal" [formGroup]="adsForm" (ngSubmit)="onSubmit()">
+<h1>Add Ads</h1>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name"><b>Name:</b></label>
+      <div class="col-sm-12">
+        <input type="name" class="form-control col-sm-8" id="name" placeholder="Enter you full name" formControlName="name">
+      </div>
+    </div>
 
-    <label>
-        description:
-        <input type="text" formControlName="description">
-    </label>
-    <label>
-        link:
-        <input type="text" formControlName="link">
-    </label>
-    <button type="submit" [disabled]="!adsForm.valid">Submit</button>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="text"><b>Description:</b></label>
+      <div class="col-sm-12"> 
+        <input type="text" class="form-control col-sm-8" id="text" placeholder="Enter description" formControlName="description">
+      </div>
+    </div>
 
-</form>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="Link"><b>Link:</b></label>
+        <div class="col-sm-12"> 
+          <input type="Link" class="form-control col-sm-8" id="Link" placeholder="Enter link" formControlName="link">
+        </div>
+    </div>
+
+    <div class="form-group"> 
+      <div class="col-sm-offset-2 col-sm-12">
+        <button type="submit" [disabled]="!adsForm.valid">Submit</button>
+      </div>
+    </div>
+  </form>
