@@ -7,6 +7,7 @@ import { Seller } from '../models/seller.models';
 export class SellerService {
 
     constructor(public httpClient: HttpClient) { }
+    public seller1: Seller;
 
     sellerAsyncPost(seller: Seller): Observable<Seller> {
         return this.httpClient.post("http://localhost:8000/api/Seller/", seller)

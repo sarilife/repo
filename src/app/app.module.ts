@@ -19,6 +19,9 @@ import { BuyerComponent } from './buyer/buyer.component';
 import { AddBuyerComponent } from './add-buyer/add-buyer.component';
 import { BuyerService } from './shared/services/buyer.service';
 import { ItemComponent } from './item/item.component';
+import { BidItemComponent } from './bid-item/bid-item.component';
+import { AddBidItemComponent } from './add-bid-item/add-bid-item.component';
+import { BidItemService } from './shared/services/biditem.service';
 @NgModule({
     declarations: [
         AppComponent,
@@ -30,6 +33,8 @@ import { ItemComponent } from './item/item.component';
         BuyerComponent,
         AddBuyerComponent,
         ItemComponent,
+        BidItemComponent,
+        AddBidItemComponent,
     ],
     imports: [
         BrowserModule,
@@ -42,7 +47,8 @@ import { ItemComponent } from './item/item.component';
 
         ReactiveFormsModule
     ],
-    providers: [AdvertisementService, SellerService, BuyerService],
+    providers: [AdvertisementService, SellerService, BuyerService
+        , BidItemService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
