@@ -1,33 +1,39 @@
-<form [formGroup]="itemBidForm" (ngSubmit)="onSubmit()">
+<form class="form-horizontal" [formGroup]="itemBidForm" (ngSubmit)="onSubmit()">
+        <h1>New Item to Bid/buy Form</h1>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="name"><b>Item Name:</b></label>
+              <div class="col-sm-12">
+                <input type="name" class="form-control col-sm-8" id="name" placeholder="Enter you full name" formControlName="name">
+              </div>
+            </div>
+        
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="number"><b>Price:</b></label>
+              <div class="col-sm-12"> 
+                <input type="number" class="form-control col-sm-8" id="number" formControlName="start_price">
+              </div>
+            </div>
+        
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="phone"><b>fix price:</b></label>
+                <div class="col-sm-12"> 
+                  <select type="" class="form-control col-sm-8" placeholder="Enter phone number" formControlName="fixed_price">
+                    <option value="1">Fixed-price</option>
+                    <option value="0">Bid</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="number"><b>Image Url:</b></label>
+                <div class="col-sm-12"> 
+                    <input type="file" class="image col-sm-8" id="avatar" (change)="onFileChange($event)" #fileInput>
+                </div>
+            </div>
 
-    <label>
-        Item Name :
-        <input type="text" formControlName="name">
-    </label>
-
-
-
-    <label>
-        Price
-        <input type="number" formControlName="start_price">
-    </label>
-    <label>
-        fix price
-    </label>
-    <select type="" formControlName="fixed_price">
-        <option value="1">Fixed</option>
-        <option value="0">Not Fixed</option>
-    </select>
-
-
-    <label>
-        image Url :
-
-        <input type="file" id="avatar" (change)="onFileChange($event)" #fileInput />
-    </label>
-
-    <button type="submit" [disabled]="!itemBidForm.valid">Submit</button>
-
-</form>
-
-<img [src]="url" height="200"> <br />
+            <div class="form-group"> 
+              <div class="col-sm-offset-2 col-sm-12">
+                    <button type="submit" [disabled]="!itemBidForm.valid">Submit</button>
+              </div>
+            </div>
+          </form>
