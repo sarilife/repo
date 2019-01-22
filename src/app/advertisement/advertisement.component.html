@@ -14,11 +14,10 @@
 <div class="row">
 <div class="barcode col-md-2">
 
-
 </div>
 
-<div id="demo" class="carousel slide col-md-10" data-ride="carousel">
-    <div class="row-md-10">
+<div id="demo" class="carousel slide col-md-10" data-ride="carousel" >
+    <div class="row-md-10" *ngIf="!isValid;else other_content">
 
     <slideshow #slideshow [imageUrls]="imageUrls" [height]="height" [minHeight]="minHeight" [arrowSize]="arrowSize"
         [showArrows]="showArrows" [disableSwiping]="disableSwiping" [autoPlay]="autoPlay" [stopAutoPlayOnSlide]="stopAutoPlayOnSlide"
@@ -26,8 +25,7 @@
         [showDots]="showDots" [dotColor]="dotColor" [showCaptions]="showCaptions" [captionColor]="captionColor"
         [captionBackground]="captionBackground" [lazyLoad]="lazyLoad" [hideOnNoSlides]="hideOnNoSlides">
     </slideshow>
-    
-    </div>
+
     <div class="row-md-2">
         <h2>Our Advertisements:</h2>
             <table class="table">
@@ -42,10 +40,17 @@
                         <th>{{a.description}}</th>
                         
                     </tbody>
-                </table>
+            </table>
     </div>
 </div>
+<div class="row-md-10">
+<ng-template #other_content >
+        <app-bid-item></app-bid-item>
+      </ng-template>
 </div>
+</div>
+</div>  
+
 </body>
 </html>
 ​

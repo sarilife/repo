@@ -2,15 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { Advertisement } from '../shared/models/advertisement.model';
 import { AdvertisementService } from '../shared/services/advertisement.service';
 import { IImage } from 'ng-simple-slideshow';
+import { BidItemService } from '../shared/services/biditem.service';
 
 @Component({
     selector: 'app-advertisement',
     templateUrl: './advertisement.component.html',
     styleUrls: ['./advertisement.component.css']
 })
-export class AdvertisementComponent implements OnInit {
-    imageUrls: (string | IImage)[] = [
 
+export class AdvertisementComponent implements OnInit {
+    isValid : boolean = false;
+
+    imageUrls: (string | IImage)[] = [
     ];
 
     height: string = '600px';
@@ -36,12 +39,18 @@ export class AdvertisementComponent implements OnInit {
 
 
     public advertisements: Advertisement[];
-    constructor(public advertisementService: AdvertisementService) {
+    constructor(public biditemservice:BidItemService, public advertisementService: AdvertisementService) {
 
     }
 
     ngOnInit() {
-
+        this.biditemservice.bidItemAsyncGet().subscribe((e)=>{
+            console.log(e.length )
+            if(e.length > 0){
+                this.isValid = true;
+            }
+        });
+        
         this.advertisementService.advertisementAsyncGet().subscribe(advertisements => {
             this.advertisements = advertisements;
 
