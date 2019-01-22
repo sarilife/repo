@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { BidItem } from '../shared/models/biditem.model';
 import { BidItemService } from '../shared/services/biditem.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-bid-item',
@@ -10,21 +11,21 @@ import { BidItemService } from '../shared/services/biditem.service';
 export class BidItemComponent implements OnInit {
 
 
-    public bidItem: BidItem[];
-    constructor(public bidItemService: BidItemService) {
+
+    // public bidItem: BidItem[];
+    constructor(public route: ActivatedRoute, public bidItemService: BidItemService) {
 
     }
 
     ngOnInit() {
-
-        this.bidItemService.bidItemAsyncGet().subscribe(bidItem => {
-            this.bidItem = bidItem;
-
-
-
-        }
-        )
+        this.bidItemService.refreshList();
+        
+        // this.bidItemService.bidItemAsyncGet().subscribe(bidItem => {
+        //     this.bidItem = bidItem;
+        // }
+        // )
     }
+
 
 
 
