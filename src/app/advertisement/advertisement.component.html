@@ -13,13 +13,18 @@
 <body>
 <div class="row">
 <div class="barcode col-sm-3">
-        <h4>To add a new item to bid or to sell scan this QR Code:</h4>
-        <br>
-        <qrcode [qrdata]="'http://10.144.65.12:4200/add_seller/'" [size]="200" [level]="'M'"></qrcode>
-        <br>
-        <h4>To add a new ADS to our screen scan this QR Code:</h4>
-        <br>
-        <qrcode [qrdata]="'http://10.144.65.12:4200/add_ads/'" [size]="200" [level]="'M'"></qrcode>
+    <div class="title row-md-4">
+        <h1><b>Flowers</b></h1>
+    </div>
+    <div class="qrcode row-md-8">
+            <h4 style="color:black">To add a new item to bid or to sell scan this QR Code:</h4>
+            <qrcode [qrdata]="'http://10.144.65.12:4200/add_seller/'" [size]="200" [level]="'M'"></qrcode>
+            <b style="color:black">----</b>
+            <br>
+            <h4 style="color:black">To add a new ADS to our screen scan this QR Code:</h4>
+            <qrcode [qrdata]="'http://10.144.65.12:4200/add_ads/'" [size]="200" [level]="'M'"></qrcode>
+    </div>
+        
 </div>
 
 <div id="demo" class="carousel slide col-sm-9" data-ride="carousel" >
