@@ -1,4 +1,4 @@
-<table class="table">
+<!-- <table class="table">
 
     <thead>
         <th>#</th>
@@ -9,4 +9,54 @@
         <td> <img src="{{a.image}}" width="500px" height="500px" /></td>
         <td>{{a.start_price}}</td>
     </tbody>
-</table>
+</table> -->
+<div class="row">
+   
+
+    <div class="col-md-8">
+            <tbody *ngFor="let a of bidItem;let i = index;">
+        <div class="row-md-2">
+            <h2 style="text-align: center">Bid</h2>
+            <br>
+        </div>
+        
+        <div class="row-md-8">
+            <td> <img src="{{a.image}}"  height="600px" /></td>
+            <br>
+        </div>
+
+        <div class="row-md-2">
+           
+        </div>
+    </tbody>
+    </div>
+
+    <div class="det col-md-4">
+        <tbody *ngFor="let a of bidItem;let i = index;">
+            <h3>The seller:</h3>
+            {{ a.seller_id }}
+            <br>----
+            <br>
+            <div *ngIf="isValid;else other_content">
+                    <h3>Begining Price is:</h3>
+                    {{a.start_price}}
+                    <br>----
+                    <br>
+                    <h3>Current price is:</h3>
+                    {{a.start_price}}
+                    <br>----
+                    <br>
+            </div>
+            <ng-template #other_content >
+                    <h3>The Price is:</h3>
+                    {{a.start_price}}
+                    <br>----
+                    <br>
+            </ng-template>
+            <div>
+                <h3>TO buy the item scan the QR code:</h3>
+            </div>
+
+        </tbody>
+    </div>
+</div>
