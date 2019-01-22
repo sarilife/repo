@@ -20,6 +20,7 @@ export class AddBidItemComponent implements OnInit {
         name: new FormControl(''),
         fixed_price: new FormControl(''),
         start_price: new FormControl(''),
+        time_end: new FormControl(''),
         // image: new FormControl('')
     });
     url: any;
@@ -41,7 +42,9 @@ export class AddBidItemComponent implements OnInit {
             Number(this.sellerService.num),
             null,
             this.itemBidForm.value.fixed_price,
-            this.itemBidForm.value.start_price)
+            this.itemBidForm.value.start_price,
+            (new Date()).getTime(),
+            (new Date()).getTime() + Number(this.itemBidForm.value.time_end))
         console.log(this.bidItem);
 
         this.bidItemService.bidItemAsyncPost(this.bidItem).subscribe(
