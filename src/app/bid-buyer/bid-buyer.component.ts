@@ -63,8 +63,7 @@ export class BidBuyerComponent implements OnInit {
         this.bidItem.start_price = this.changePriceForm.value.price
         this.bidItemService.bidItemAsyncPutItemById(this.bid_id, this.bidItem).subscribe((e) => {
             console.log(e);
-            this.bidItemService.refreshList();
-        })
+        });
         //   this.seller = new Seller(null, this.sellerForm.value.name,
         //     this.sellerForm.value.email,
         //     this.sellerForm.value.phone_number)

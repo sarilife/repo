@@ -5,8 +5,7 @@
         <th>image</th>
         <th>price </th>
     </thead>
-    <tbody *ngFor="let a of this.bidItemService.bidItems;let i = index;">
-        <th>{{i+1}}</th>
+    <tbody *ngFor="let a of bidItem;let i = index;">
         <td> <img src="{{a.image}}" width="500px" height="500px" /></td>
         <td>{{a.start_price}}</td>
     </tbody>
