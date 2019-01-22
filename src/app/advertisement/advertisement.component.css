@@ -1,14 +1,25 @@
  body {
-    background-image: "../assets/green.jpg";
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
-.barcode {
+.qrcode , h4{
     padding: 5% ;
     padding-top: 0%;
     align-self: center;
     margin: auto;
+    background-color: #FF0269;
 }
 .bid{
     margin: auto;
     position: relative;
     overflow-y: auto;
+}
+
+h1 {
+    background-color: #ffde03;
+    color: black;   
+    text-align: center;
+    padding: 5%;
+    margin: 0px;
 }

@@ -1,22 +1,8 @@
-<!-- <table class="table">
-
-    <thead>
-        <th>#</th>
-        <th>image</th>
-        <th>price </th>
-    </thead>
-    <tbody *ngFor="let a of bidItem;let i = index;">
-        <td> <img src="{{this.bidItemService.bidItem[0].image}}" width="500px" height="500px" /></td>
-        <td>{{this.bidItemService.bidItem[0].start_price}}</td>
-    </tbody>
-</table> -->
 <div class="row">
-
-
     <div class="col-md-8">
         <tbody>
             <div class="row-md-2">
-                <h2 style="text-align: center">Bid</h2>
+                <h3 style="text-align: center"><b> {{ this.bidItemService.bidItem[0].name }} </b></h3>
                 <br>
             </div>
 
@@ -33,28 +19,28 @@
 
     <div class="det col-md-4">
         <tbody>
-            <h3>The seller:</h3>
+            <h5><b> seller:</b></h5>
             {{ seller.name }}
             <br>----
             <br>
             <div *ngIf="isValid;else other_content">
-                <h3>Begining Price is:</h3>
+                <h5><b> Price is: </b></h5>
                 {{this.bidItemService.bidItem[0].start_price}}
                 <br>----
                 <br>
-                <h3>Current price is:</h3>
+                <h5><b>Current price is:</b></h5>
                 {{this.bidItemService.bidItem[0].current_price}}
                 <br>----
                 <br>
             </div>
             <ng-template #other_content>
-                <h3>The Price is: </h3>
+                <h5><b>The Price is: </b></h5>
                 {{this.bidItemService.bidItem[0].start_price}}
                 <br>----
                 <br>
             </ng-template>
             <div>
-                <h3>TO buy the item scan the QR code:</h3>
+                <h5><b>TO buy the item scan the QR code:</b></h5>
                 <br>
                 <qrcode [qrdata]="'http://10.144.65.12:4200/add_buyer/'" [size]="200" [level]="'M'"></qrcode>
             </div>
