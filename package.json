@@ -20,12 +20,11 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
-
-    "bootstrap": "^4.2.1",
-
     "angular2-image-upload": "^1.0.0-rc.1",
-
+    "angularx-qrcode": "^1.5.1",
+    "bootstrap": "^4.2.1",
     "core-js": "^2.5.4",
+    "cors": "^2.8.5",
     "ng-simple-slideshow": "^1.2.7",
     "rxjs": "^6.3.3",
     "rxjs-compat": "^6.3.3",

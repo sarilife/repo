@@ -1,0 +1,8 @@
+{
+    "/api" : {
+        "target" : "10.144.65.12", 
+        "secure" : false,
+        "logLevel" : "debug", 
+        "changeOrigin": true
+    }
+}

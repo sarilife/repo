@@ -20,6 +20,13 @@ export class BidItemComponent implements OnInit {
 
     ngOnInit() {
         this.bidItemService.refreshList();
+        
+        this.bidItemService.bidItemAsyncGet().subscribe((t) => {
+            if((Number((new Date()).getSeconds()) - Number(t[0].time_end)) == 0){
+                t.shift();
+                this.bidItemService.refreshList();
+            }
+        })
 
         this.bidItemService.bidItemAsyncGet().subscribe((e) => {
             console.log(e[0].fixed_price)

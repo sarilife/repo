@@ -12,11 +12,17 @@
 
 <body>
 <div class="row">
-<div class="barcode col-md-2">
-
+<div class="barcode col-sm-3">
+        <h4>To add a new item to bid or to sell scan this QR Code:</h4>
+        <br>
+        <qrcode [qrdata]="'http://10.144.65.12:4200/add_seller/'" [size]="200" [level]="'M'"></qrcode>
+        <br>
+        <h4>To add a new ADS to our screen scan this QR Code:</h4>
+        <br>
+        <qrcode [qrdata]="'http://10.144.65.12:4200/add_ads/'" [size]="200" [level]="'M'"></qrcode>
 </div>
 
-<div id="demo" class="carousel slide col-md-10" data-ride="carousel" >
+<div id="demo" class="carousel slide col-sm-9" data-ride="carousel" >
     <div class="row-md-10" *ngIf="!isValid;else other_content">
 
     <slideshow #slideshow [imageUrls]="imageUrls" [height]="height" [minHeight]="minHeight" [arrowSize]="arrowSize"
@@ -43,7 +49,7 @@
             </table>
     </div>
 </div>
-<div class="row-md-10">
+<div class="bid row-md-10">
 <ng-template #other_content >
         <app-bid-item></app-bid-item>
       </ng-template>

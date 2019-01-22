@@ -4,5 +4,7 @@
 } 
 
 .photo {
-    padding-left: 5%;
+    padding-left: 2%;
+    position: relative;
+    overflow-y: auto;
 }

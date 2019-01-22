@@ -1,0 +1,14 @@
+ body {
+    background-image: "../assets/green.jpg";
+}
+.barcode {
+    padding: 5% ;
+    padding-top: 0%;
+    align-self: center;
+    margin: auto;
+}
+.bid{
+    margin: auto;
+    position: relative;
+    overflow-y: auto;
+}

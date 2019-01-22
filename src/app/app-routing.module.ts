@@ -20,7 +20,7 @@ const routes: Routes = [
     { path: "add_seller", component: AddSellerComponent }, // 1
     { path: "add_buyer", component: AddBuyerComponent }, // 1
     { path: "add_bid_item", component: AddBidItemComponent }, // 1
-    { path: "bid_item", component: BidItemComponent },
+    { path: "bid_item", component: BidItemComponent }, // 1
     { path: "buyer/bid/:id", component: AddBuyerComponent },
     { path: "bid_buy/bid/:bid_id/buyer/:buyer_id", component: BidBuyerComponent }
 

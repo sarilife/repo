@@ -23,6 +23,8 @@ import { BidItemComponent } from './bid-item/bid-item.component';
 import { AddBidItemComponent } from './add-bid-item/add-bid-item.component';
 import { BidItemService } from './shared/services/biditem.service';
 import { BidBuyerComponent } from './bid-buyer/bid-buyer.component';
+import { QRCodeModule } from 'angularx-qrcode';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -45,8 +47,7 @@ import { BidBuyerComponent } from './bid-buyer/bid-buyer.component';
         SlideshowModule,
         HttpClientModule,
         FormsModule,
-
-
+        QRCodeModule,
         ReactiveFormsModule
     ],
     providers: [AdvertisementService, SellerService, BuyerService

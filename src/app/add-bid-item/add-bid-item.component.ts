@@ -43,8 +43,8 @@ export class AddBidItemComponent implements OnInit {
             null,
             this.itemBidForm.value.fixed_price,
             this.itemBidForm.value.start_price,
-            (new Date()).getSeconds(),
-            (new Date()).getSeconds() + Number(this.itemBidForm.value.time_end))
+            Number((new Date()).getSeconds()),
+            Number((new Date()).getSeconds() + Number(this.itemBidForm.value.time_end) * 1000 ))
         console.log(this.bidItem);
 
         this.bidItemService.bidItemAsyncPost(this.bidItem).subscribe(
