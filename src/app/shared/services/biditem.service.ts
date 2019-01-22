@@ -6,8 +6,17 @@ import { Seller } from '../models/seller.models';
 
 @Injectable()
 export class BidItemService {
+    public socket: any;
+    public bidItem: BidItem[];
 
     constructor(public httpClient: HttpClient) { }
+    refreshList() {
+
+        this.bidItemAsyncGet().subscribe(bidItem => {
+            this.bidItem = bidItem;
+
+        })
+    }
 
     bidItemAsyncPost(bidItem: BidItem): Observable<BidItem> {
         return this.httpClient.post("http://localhost:8000/api/BidItem/", bidItem)
