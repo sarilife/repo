@@ -19,6 +19,11 @@ export class SellerService {
             .map((seller: Seller[]) => seller);
     }
 
+    sellerAsyncGetById(id): Observable<Seller> {
+        return this.httpClient.get("http://localhost:8000/api/Seller/" + id + "/")
+            .map((seller: Seller) => seller);
+    }
+
     sellerAsyncGetByEmail(email): Observable<Seller[]> {
         return this.httpClient.get("http://localhost:8000/api/Seller?email=" +
             email)

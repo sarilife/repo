@@ -40,7 +40,8 @@ export class AddBidItemComponent implements OnInit {
             // this.sellerService.seller1,
             Number(this.sellerService.num),
             null,
-            this.itemBidForm.value.fixed_price)
+            this.itemBidForm.value.fixed_price,
+            this.itemBidForm.value.start_price)
         console.log(this.bidItem);
 
         this.bidItemService.bidItemAsyncPost(this.bidItem).subscribe(

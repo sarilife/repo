@@ -11,25 +11,26 @@ import { Seller } from '../shared/models/seller.models';
 })
 export class BidItemComponent implements OnInit {
 
-    isValid : boolean = false;
+    isValid: boolean = false;
     public bidItem: BidItem[];
-    public sellers: Seller[];
-    constructor(public sellerService: SellerService,public bidItemService: BidItemService) {
+    public seller: Seller;
+    constructor(public sellerService: SellerService, public bidItemService: BidItemService) {
 
     }
 
     ngOnInit() {
 
-        this.bidItemService.bidItemAsyncGet().subscribe((e)=>{
-            console.log(e[0].fixed_price )
-            if(e[0].fixed_price == 0){
+        this.bidItemService.bidItemAsyncGet().subscribe((e) => {
+            console.log(e[0].fixed_price)
+            if (e[0].fixed_price == 0) {
                 this.isValid = true;
+                this.sellerService.sellerAsyncGetById(e[0].seller_id).subscribe(seller => {
+                    this.seller = seller;
+                })
             }
         });
 
-        this.sellerService.sellerAsyncGet().subscribe(sellers => {
-            this.sellers = sellers;
-        })
+
 
         this.bidItemService.bidItemAsyncGet().subscribe(bidItem => {
             this.bidItem = bidItem;

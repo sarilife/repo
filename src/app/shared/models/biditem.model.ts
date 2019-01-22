@@ -11,7 +11,8 @@ export class BidItem {
         public start_price: Number,
         public seller_id: Number,
         public buyer_id: Number,
-        public fixed_price: Number) {
+        public fixed_price: Number,
+        public current_price: Number) {
 
     }
 
