@@ -10,6 +10,7 @@ import { AddBuyerComponent } from './add-buyer/add-buyer.component';
 import { AddBidItemComponent } from './add-bid-item/add-bid-item.component';
 import { BidItemComponent } from './bid-item/bid-item.component';
 import { BidBuyerComponent } from './bid-buyer/bid-buyer.component';
+import { SellerNewsComponent } from './seller-news/seller-news.component';
 
 const routes: Routes = [
     { path: "home", component: HomeComponent }, // 1
@@ -22,7 +23,8 @@ const routes: Routes = [
     { path: "add_bid_item", component: AddBidItemComponent }, // 1
     { path: "bid_item", component: BidItemComponent }, // 1
     { path: "buyer/bid/:id", component: AddBuyerComponent },
-    { path: "bid_buy/bid/:bid_id/buyer/:buyer_id", component: BidBuyerComponent }
+    { path: "bid_buy/bid/:bid_id/buyer/:buyer_id", component: BidBuyerComponent },
+    { path: "seller_news", component: SellerNewsComponent },
 
 
 

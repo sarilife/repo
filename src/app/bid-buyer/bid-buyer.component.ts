@@ -25,12 +25,13 @@ export class BidBuyerComponent implements OnInit {
     constructor(public buyerService: BuyerService, public route: ActivatedRoute, public bidItemService: BidItemService) { }
 
     ngOnInit() {
+
         this.bid_id = Number(this.route.snapshot.paramMap.get('bid_id'));
         this.buyer_id = Number(this.route.snapshot.paramMap.get('buyer_id'));
-
+        console.log(this.bid_id, this.buyer_id);
         this.bidItemService.bidItemAsyncGetItemById(this.bid_id).subscribe(bidItem => {
             this.bidItem = bidItem;
-
+            console.log("!");
             this.buyerService.buyerAsyncGetById(this.buyer_id).subscribe((buyer) => {
                 this.buyer = buyer;
                 console.log(this.buyer, this.bidItem);
@@ -52,8 +53,7 @@ export class BidBuyerComponent implements OnInit {
             //         })
             //     }
             // });
-        }
-        );
+        });
 
     }
 

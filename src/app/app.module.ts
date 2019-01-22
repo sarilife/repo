@@ -24,6 +24,7 @@ import { AddBidItemComponent } from './add-bid-item/add-bid-item.component';
 import { BidItemService } from './shared/services/biditem.service';
 import { BidBuyerComponent } from './bid-buyer/bid-buyer.component';
 import { QRCodeModule } from 'angularx-qrcode';
+import { SellerNewsComponent } from './seller-news/seller-news.component';
 
 @NgModule({
     declarations: [
@@ -39,6 +40,7 @@ import { QRCodeModule } from 'angularx-qrcode';
         BidItemComponent,
         AddBidItemComponent,
         BidBuyerComponent,
+        SellerNewsComponent,
     ],
     imports: [
         BrowserModule,

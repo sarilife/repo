@@ -30,8 +30,8 @@ export class AddBuyerComponent implements OnInit {
             this.buyerForm.value.phone_number)
         this.buyerService.buyerAsyncPost(this.buyer).subscribe(e => {
             // console.log()
-            this.router.navigate(['/bid_buy/bid/' + e.buyer_id + '/buyer/' +
-                this.bidId]);
+            this.router.navigate(['/bid_buy/bid/' + this.bidId + '/buyer/' +
+                e.buyer_id]);
 
         }
         );

@@ -1,0 +1,8 @@
+<h1>Product : {{this.bidItemService.bidItem[0].name}}</h1>
+<h1>start Price : {{this.bidItemService.bidItem[0].start_price}}</h1>
+<img src="{{this.bidItemService.bidItem[0].image}}" width="600px" height="600px" />
+<h1>Buyer : {{this.bidItemService.buyer.name}}</h1>
+<h1>Seller : {{this.bidItemService.seller.name}}</h1>
+<h1>current Price : {{this.bidItemService.bidItem[0].current_price}}</h1>
+
+<button (click)="change()"> Deal</button>
