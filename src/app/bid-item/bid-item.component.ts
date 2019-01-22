@@ -11,6 +11,8 @@ import { Seller } from '../shared/models/seller.models';
 })
 export class BidItemComponent implements OnInit {
 
+
+    url:String ;
     isValid: boolean = false;
     // public bidItem: BidItem[];
     public seller: Seller;
@@ -44,6 +46,7 @@ export class BidItemComponent implements OnInit {
         //     this.bidItem = bidItem;
 
         // })
+        // this.url =
 
     }
 

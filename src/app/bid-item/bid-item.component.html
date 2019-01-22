@@ -44,7 +44,7 @@
             <div>
                 <h5><b>TO buy the item scan the QR code:</b></h5>
                 <br>
-                <qrcode [qrdata]="'http://10.144.65.12:4200/add_buyer/'" [size]="200" [level]="'M'"></qrcode>
+                <qrcode [qrdata]="'http://10.144.65.12:4200/add_buyer/'+this.bidItemService.bidItem[0].bid_item_id"  [size]="200" [level]="'M'"></qrcode>
             </div>
         </tbody>
     </div>
